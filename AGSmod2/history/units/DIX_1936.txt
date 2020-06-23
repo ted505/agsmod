@@ -1,0 +1,337 @@
+﻿start_equipment_factor = 0.1
+##### Division Templates #####
+division_template = {
+	name = "Infantry Division"  	# Standard formation for frontline divisions
+
+	division_names_group = USA_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }  # US Hvy Field Arty consisted of 2 Bns, 155mm howitzers
+		engineer = { x = 0 y = 1 }   # US Eng Rgt consisted of 2 Bns
+	}
+}
+division_template = {
+	name = "National Guard Division"  # Standard formation for NG divisions through late 1940
+
+	division_names_group = USA_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }  # US Hvy Field Arty consisted of 2 Bns, 155mm howitzers
+		engineer = { x = 0 y = 1 }   # US Eng Rgt consisted of 2 Bns
+	}
+}
+division_template = {
+	name = "Cavalry Division"  	# 1st Cavalry Division only
+
+	division_names_group = USA_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 3 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      # US Cav Recon consisted of 52 ACs, 13 L Arm
+		engineer = { x = 0 y = 1 }   # US Eng Bn
+	}
+}
+division_template = {
+	name = "Mechanized Cavalry"  	# 7th Cavalry (Mech.) Brigade, precursor to 1st Armored Div.
+
+	division_names_group = USA_CAV_01		# Brigade level irregular unit, so no default names
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+	}
+	support = {
+		mot_recon = { x = 0 y = 0 }      
+		engineer = { x = 0 y = 1 }   
+	}
+}
+division_template = {
+	name = "Marine Brigade" 		# 1st, 2nd Marine Brigades, precursors to 1st, 2nd USMC Divisions
+
+	division_names_group = USA_MAR_01
+
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   
+	}
+	priority = 2
+}
+division_template = {
+	name = "Garrison Brigade"  		# used for island defense (older equipment, lower experience)
+
+	division_names_group = USA_GAR_01		# Brigade level irregular unit, so no default names
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   
+	}
+	priority = 0
+}
+
+
+###### OOB ######
+units = {
+	####### CONUS Theater (CO: Marshall) #######
+	### Carribean Forces ###
+	division = {			
+		name = "Puerto Rico Department"
+		location = 1440
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+
+	}			
+	division = {			
+		name = "Panama Canal Force"				# CO: Stone
+		location = 7617
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+
+	}
+
+	### 1st Army (CO: Drum)  -- note: Armies only paper organizations in 1939 ###
+	division= {			
+		name = "7th Cavalry (Mech.) Brigade"
+		location = 6696
+		division_template = "Mechanized Cavalry"
+		start_experience_factor = 0.3
+	}				
+	
+	
+	
+					
+
+
+	### 3rd Army (CO: Brees)  -- note: Armies only paper organizations in 1939 ###
+	# IV Army Corps (CO: Embick) #
+	division = {			
+		division_name = { # 30th 'Old Hickory' Division
+			is_name_ordered = yes
+			name_order = 30
+		}
+		location = 12384
+		division_template = "National Guard Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}			
+	division= {			
+		division_name = { # 31st 'Dixie' Division
+			is_name_ordered = yes
+			name_order = 31
+		}
+		location = 12384
+		division_template = "National Guard Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}			
+	# VIII Army Corps (CO: Brees) #
+	division= {			
+		division_name = { # 2nd 'Indianhead' Division
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 12782
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}			
+	division= {			
+		division_name = { # 36th 'Texas' Division
+			is_name_ordered = yes
+			name_order = 36
+		}
+		location = 12782
+		division_template = "National Guard Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}			
+	division= {			
+		division_name = { # 45th 'Thunderbird' Division
+			is_name_ordered = yes
+			name_order = 45
+		}
+		location = 12782
+		division_template = "National Guard Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}			
+	division= {			
+		division_name = { # 1st Cavalry 'The 1st Team' Division
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12782
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.3
+	}			
+	}			
+
+	
+	### U.S. Army Forces in the Far East ###		
+	division = {										# CO: Grant
+		name = "Philippine Division"			
+		location = 10265
+		division_template = "Infantry Division"		# older equipment, less training than NG division
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}				
+}					
+			
+			
+air_wings = {
+	##### U.S. Army Air Force (USAAF) (CO: Emmo) #####
+	378 = {																# California
+		### 1st USAAF Wing (CO: Fickel) ###
+		fighter_equipment_1 =  { owner = "USA" amount = 72 }			# 20th Pursuit Group -- P-36As
+		strat_bomber_equipment_1 = { owner = "USA" amount = 36 }		# 7th Bombardment Group -- B-17s
+		tac_bomber_equipment_1 = { owner = "USA" amount = 48 }			# 17th Bombardment Group -- B-23s
+		tac_bomber_equipment_0 = { owner = "USA" amount = 36 }			# 19th Bombardment Group -- B-18s
+		### USN Patrol Wings ###
+		nav_bomber_equipment_1 =  { owner = "USA" amount = 36 }			# Naval Patrol Wing 1 -- PBY-1
+		cv_fighter_equipment_1 =  { owner = "USA" amount = 12 }			# 2nd/I Marine Air Wing -- F3F Grumman
+		cv_CAS_equipment_1 =  { owner = "USA" amount = 12 }				# 2nd/II Marine Air Wing -- SB2U Vindicator
+		cv_nav_bomber_equipment_1 =  { owner = "USA" amount = 12 }		# 2nd/III Marine Air Wing -- TBD Devastator
+	}
+	362 = { 															# Virginia
+		### 2nd USAAF Wing (CO: Krogstad) ###
+		heavy_fighter_equipment_1 =  { owner = "USA" amount = 168 }		# 1st Pursuit Group -- P-35s
+				# 8th Pursuit Group -- P-35s
+		strat_bomber_equipment_1 = { owner = "USA" amount = 36 }		# 9th Bombardment Group -- B-17s
+		tac_bomber_equipment_0 = { owner = "USA" amount = 48 }			# 2nd Bombardment Group -- B-18s
+		### USN Patrol Wings ###
+		nav_bomber_equipment_1 =  { owner = "USA" amount = 36 }			# Naval Patrol Wing 5 -- PBY-1
+		cv_fighter_equipment_1 =  { owner = "USA" amount = 12 }			# 1st/I Marine Air Wing -- F3F Grumman
+		cv_CAS_equipment_1 =  { owner = "USA" amount = 12 }				# 1st/II Marine Air Wing -- SB2U Vindicator
+		cv_nav_bomber_equipment_1 =  { owner = "USA" amount = 12 }		# 1st/II Marine Air Wing -- TBD Devastator
+	}
+	371 = { 															# Louisiana
+		### 3rd USAAF Wing (CO: Martin) ###
+		CAS_equipment_2 = { owner = "USA" amount = 63 }					# 3rd Attack Group -- A-20s
+	}
+
+	629 = { 															# Hawaii
+		### 18th Composite Wing (CO: Frank) ###
+		fighter_equipment_1 =  { owner = "USA" amount = 72 }			# 18th Pursuit Group -- P-36As
+		tac_bomber_equipment_0 = { owner = "USA" amount = 36 }			# 5th/I Composite Group -- B-18s
+		CAS_equipment_1 = { owner = "USA" amount = 21 }					# 5th/II Composite Group -- A-17s
+		### USN Patrol Wings ###
+		nav_bomber_equipment_1 =  { owner = "USA" amount = 36 }			# Naval Patrol Wing 2 -- PBY-1
+	}
+
+	685 = { 															# Canal Zone
+		### 19th Composite Wing (CO: Dargue) ###
+		fighter_equipment_0 =  { owner = "USA" amount = 48 }			# 16th Pursuit Group -- P-26As
+		tac_bomber_equipment_0 = { owner = "USA" amount = 36 }			# 6th/I Composite Group -- B-18s
+		CAS_equipment_1 = { owner = "USA" amount = 21 }					# 6th/II Composite Group -- A-17s
+		### USN Patrol Wings ###
+		nav_bomber_equipment_1 =  { owner = "USA" amount = 36 }			# Naval Patrol Wing 3 -- PBY-1
+	}
+
+#	327 = { 															# Luzon, PHI
+#		### Philippine Composite Wing (CO: ) ###
+#		fighter_equipment_0 =  { owner = "USA" amount = 72 }			# 4th/I Composite Group -- P-26As
+#		tac_bomber_equipment_0 = { owner = "USA" amount = 12 }			# 4th/II Composite Group -- B-18s
+#	}
+
+	386 = { 															# Washington (state)													
+		### USN Patrol Wings ###
+		nav_bomber_equipment_1 =  { owner = "USA" amount = 30 }			# Naval Patrol Wing 4 -- PBY-1
+	}
+}
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+instant_effect = {
+		
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "USA"
+		}
+		requested_factories = 6
+		progress = 0.1
+		efficiency = 100
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "USA" 
+		}
+		requested_factories = 2
+		progress = 0.3
+		efficiency = 100
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "USA" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 100
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = cv_fighter_equipment_1
+			creator = "USA" 
+		}
+		requested_factories = 1
+		progress = 0.15
+		efficiency = 100
+	}
+}
+#####################

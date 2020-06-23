@@ -1,7 +1,7 @@
-﻿capital = 368
+﻿capital = 395
 
-oob = "DIX_1936"
-if = {
+#oob = "JEF_1936"
+#if = {
 	limit = { has_dlc = "Man the Guns" }
 		set_naval_oob = "USA_1936_naval_mtg"
 	else = {
@@ -10,8 +10,8 @@ if = {
 }
 
 set_research_slots = 4
-set_stability = 0.5
-set_war_support = 50
+set_stability = 0.7
+set_war_support = 20
 set_variable = { var = senators_support value = 48 }
 set_variable = { var = senators_total value = 96 }
 set_variable = { var = representatives_support value = 218 }
@@ -134,16 +134,9 @@ if = {
 	complete_national_focus = USA_war_plan_black
 	complete_national_focus = USA_strategic_bombing
  	complete_national_focus = USA_fair_labour_standards_act
-
 	set_global_flag = earhart_disappeared
-	oob = "USA_1939"
-	if = {
-		limit = { has_dlc = "Man the Guns" }
-			set_naval_oob = "USA_1939_naval_mtg"
-		else = {
-			set_naval_oob = "USA_1939_naval_legacy"
-		}
-	}
+
+	set_naval_oob = "NTR_1936_naval_mtg"
 
 	set_technology = {
 		fighter1 = 1
@@ -243,8 +236,9 @@ set_politics = {
 	elections_allowed = yes
 }
 set_popularities = {
-	democratic = 60
-	communism = 40
+	democratic = 50
+	communism = 10
+	fascism = 40
 }
 
 add_ideas = {
@@ -268,9 +262,9 @@ add_ideas = {
 }
 
 create_country_leader = {
-	name = "Sandoval"
+	name = "Just a Pot Leaf"
 	desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-	picture = "Portrait_USA_Franklin_Roosevelt.dds"
+	picture = "Portrait_Jef_democratic.dds"
 	expire = "1947.1.1"
 	ideology = liberalism
 	traits = {
@@ -279,7 +273,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Korn"
+	name = "Reagen"
 	desc = "POLITICS_WILLIAM_DUDLEY_PELLEY_DESC"
 	picture = "Portrait_USA_William_Dudley_Pelley.dds"
 	expire = "1965.1.1"
@@ -290,7 +284,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Trash"
+	name = "Poke"
 	desc = "POLITICS_EARL_BROWDER_DESC"
 	picture = "portrait_USA_earl_browder.dds"
 	expire = "1965.1.1"

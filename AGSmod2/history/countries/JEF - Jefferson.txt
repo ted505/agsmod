@@ -1,6 +1,6 @@
-﻿capital = 368
+﻿capital = 361
 
-oob = "DIX_1936"
+#oob = "USA_1936"
 if = {
 	limit = { has_dlc = "Man the Guns" }
 		set_naval_oob = "USA_1936_naval_mtg"
@@ -10,8 +10,8 @@ if = {
 }
 
 set_research_slots = 4
-set_stability = 0.5
-set_war_support = 50
+set_stability = 0.75
+set_war_support = 0
 set_variable = { var = senators_support value = 48 }
 set_variable = { var = senators_total value = 96 }
 set_variable = { var = representatives_support value = 218 }
@@ -24,7 +24,7 @@ USA = {
 	country_event = { id = usa.50 days = 2 }
 	country_event = { id = usa.51 days = 2 }
 }
-#7:35 PM 6/22/2020 Starting tech
+# Starting tech
 set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
@@ -95,6 +95,29 @@ if = {
 	}
 	add_ideas = MTG_naval_treaty_adherent
 }
+
+#Monroe Doctrine
+give_guarantee = CAN
+give_guarantee = MEX
+give_guarantee = CUB
+give_guarantee = HAI
+give_guarantee = DOM
+give_guarantee = GUA
+give_guarantee = HON
+give_guarantee = ELS
+give_guarantee = NIC
+give_guarantee = COS
+give_guarantee = PAN
+give_guarantee = VEN
+give_guarantee = COL
+give_guarantee = ECU
+give_guarantee = PRU
+give_guarantee = BRA
+give_guarantee = BOL
+give_guarantee = CHL
+give_guarantee = PAR
+give_guarantee = ARG
+give_guarantee = URG
 
 1939.1.1 = {
 
@@ -243,8 +266,8 @@ set_politics = {
 	elections_allowed = yes
 }
 set_popularities = {
-	democratic = 60
-	communism = 40
+	democratic = 99
+	communism = 1
 }
 
 add_ideas = {
@@ -257,6 +280,10 @@ add_ideas = {
 
 
 # DIPLOMACY
+set_autonomy = {
+	target = PHI
+	autonomous_state =  autonomy_puppet
+}
 
 1939.1.1 = {
 	set_politics = {
@@ -268,18 +295,18 @@ add_ideas = {
 }
 
 create_country_leader = {
-	name = "Sandoval"
+	name = "Just a Pot Leaf"
 	desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-	picture = "Portrait_USA_Franklin_Roosevelt.dds"
+	picture = "Portrait_Jef_democratic.dds"
 	expire = "1947.1.1"
 	ideology = liberalism
 	traits = {
-
+		dislikes_germany
 	}
 }
 
 create_country_leader = {
-	name = "Korn"
+	name = "William Dudley Pelley"
 	desc = "POLITICS_WILLIAM_DUDLEY_PELLEY_DESC"
 	picture = "Portrait_USA_William_Dudley_Pelley.dds"
 	expire = "1965.1.1"
@@ -290,7 +317,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Trash"
+	name = "Earl Browder"
 	desc = "POLITICS_EARL_BROWDER_DESC"
 	picture = "portrait_USA_earl_browder.dds"
 	expire = "1965.1.1"

@@ -1,1 +1,3 @@
 DIX = "countries/Dixie.txt"
+NTR = "countries/North.txt"
+JEF = "countries/Jefferson.txt"

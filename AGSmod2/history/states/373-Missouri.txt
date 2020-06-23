@@ -12,12 +12,12 @@ state={
 
 
 	history={
-		owner = DIX
+		owner = JEF
 		buildings = {
 			infrastructure = 5
 			industrial_complex = 5
 		}
-		add_core_of = DIX
+		add_core_of = JEF
 		victory_points = {
 			4569 10 
 		}
